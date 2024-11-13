@@ -35,7 +35,7 @@ public class PracticalTest01Var06SecondaryActivity extends AppCompatActivity {
             if (areNumbersEqual(numbers)) {
                 gain = calculateGain(checkboxCount);
                 resultTextView.setText("Gained " + gain);
-                Toast.makeText(this, "Gained " + gain, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Gained " + gain, Toast.LENGTH_SHORT).show();
                 Log.d(TAG, "Gained " + gain);
             } else {
                 resultTextView.setText("No gain");
