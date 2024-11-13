@@ -62,12 +62,12 @@ public class PracticalTest01Var06MainActivity extends AppCompatActivity {
             }
 
             // Afișarea valorilor în Toast și Logcat
-//            String result = "Numere generate: " +
-//                    number1EditText.getText().toString() + ", " +
-//                    number2EditText.getText().toString() + ", " +
-//                    number3EditText.getText().toString();
-//            Toast.makeText(PracticalTest01Var06MainActivity.this, result, Toast.LENGTH_SHORT).show();
-//            Log.d(TAG, result);
+            String result = "Numere generate: " +
+                    number1EditText.getText().toString() + ", " +
+                    number2EditText.getText().toString() + ", " +
+                    number3EditText.getText().toString();
+            Toast.makeText(PracticalTest01Var06MainActivity.this, result, Toast.LENGTH_SHORT).show();
+            Log.d(TAG, result);
         });
 
         computeButton.setOnClickListener(v -> {
