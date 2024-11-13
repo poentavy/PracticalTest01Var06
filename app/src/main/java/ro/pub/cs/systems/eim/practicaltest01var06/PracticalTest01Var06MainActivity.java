@@ -28,6 +28,8 @@ public class PracticalTest01Var06MainActivity extends AppCompatActivity {
     private static final String TAG = "PracticalTest01Var06";
     private static final String[] POSSIBLE_VALUES = {"1", "2", "3", "*"};
 
+    private static final String SCORE_KEY = "score_key";
+
     private static final int REQUEST_CODE_SECONDARY_ACTIVITY = 1;
 
     @Override
@@ -106,4 +108,20 @@ public class PracticalTest01Var06MainActivity extends AppCompatActivity {
             Log.d(TAG, "Total Score: " + totalScore);
         }
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // Salvarea scorului total
+        outState.putInt(SCORE_KEY, totalScore);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restaurarea scorului total
+        totalScore = savedInstanceState.getInt(SCORE_KEY, 0);
+        Log.d(TAG, "Scorul restaurat: " + totalScore);
+    }
+
 }
